@@ -10,8 +10,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-code
-Code
+
+    
 <style>
     /* --- CSS VARIABLES & RESET --- */
     :root {
@@ -1018,7 +1018,7 @@ Code
                 <a href="#contact" class="btn btn-outline">Get Started</a>
             </div>
         </div>
-        <p class="payment-note fade-in">?? We accept crypto payments via MaxelPay</p>
+        <p class="payment-note fade-in">&#x1F4B0; We accept crypto payments via MaxelPay</p>
     </div>
 </section>
 
@@ -1145,7 +1145,7 @@ Code
         <div class="about-content">
             <div class="about-text fade-in">
                 <h2>About NextScale Web</h2>
-                <p>We are a team of passionate web designers and developers dedicated to helping small businesses thrive online. We believe every business deserves a great website — affordable, fast, and built to convert visitors into customers.</p>
+                <p>We are a team of passionate web designers and developers dedicated to helping small businesses thrive online. We believe every business deserves a great website Â— affordable, fast, and built to convert visitors into customers.</p>
                 <div class="values-grid">
                     <div class="value-item">
                         <div class="value-icon"><i class="fas fa-wallet"></i></div>
@@ -1245,17 +1245,17 @@ Code
                     </div>
                     <div class="form-group">
                         <label>Package Interest</label>
-                        <select required>
+                        <select name="package" required>
                             <option value="">Select a package</option>
-                            <option value="starter">Starter — $500</option>
-                            <option value="growth">Growth — $1,000</option>
-                            <option value="pro">Pro — $2,000</option>
-                            <option value="elite">Elite — $3,000</option>
+                            <option value="starter">Starter &mdash; $500</option>
+                            <option value="growth">Growth &mdash; $1,000</option>
+                            <option value="pro">Pro &mdash; $2,000</option>
+                            <option value="elite">Elite &mdash; $3,000</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Your Message</label>
-                        <textarea rows="5" placeholder="Tell us about your project..."></textarea>
+                        <textarea name="message" rows="5" placeholder="Tell us about your project..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
@@ -1315,10 +1315,10 @@ Code
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 NextScale Web. All rights reserved.</p>
+            <p>&copy; 2025 NextScale Web. All rights reserved.</p>
             <div class="maxel-badge">
                 <i class="fas fa-shield-alt"></i>
-                Payments powered by MaxelPay — Crypto accepted
+                Payments powered by MaxelPay &mdash; Crypto accepted
             </div>
         </div>
     </div>
@@ -1401,8 +1401,8 @@ quoteForm.addEventListener('submit', (e) => {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString()
     })
-    .then(() => {
-        btn.innerText = '? Message Sent!';
+    .then((response) => {
+         if (!response.ok) throw new Error('Form submission failed');
         quoteForm.reset();
         setTimeout(() => {
             btn.innerText = 'Send Message';
@@ -1410,10 +1410,11 @@ quoteForm.addEventListener('submit', (e) => {
         }, 3000);
     })
     .catch(() => {
-        btn.innerText = 'Error — Try Again';
+        btn.innerText = 'Error \u2014 Try Again';
         btn.disabled = false;
     });
 });
 </script>
 </body>
+
 </html>
